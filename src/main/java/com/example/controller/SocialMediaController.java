@@ -50,10 +50,16 @@ public class SocialMediaController {
 
     @PostMapping("/login")
     public ResponseEntity<Account> login(@RequestBody Account account){
+        
+        System.out.println("Received login request with: " + account);
+    
         Optional<Account> existingAccount = accountService.getAccountByUsername(account.getUsername());
         if (existingAccount.isPresent() && existingAccount.get().getPassword().equals(account.getPassword())) {
+            System.out.println("Login successful for user: " + existingAccount.get().getUsername());
             return ResponseEntity.ok(existingAccount.get());
         }
+    
+        System.out.println("Login failed for user: " + account.getUsername());
         return ResponseEntity.status(401).build();
     }
 
