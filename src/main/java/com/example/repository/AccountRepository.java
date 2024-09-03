@@ -6,6 +6,12 @@ import org.springframework.stereotype.Repository;
 
 import java.util.Optional;
 
+/**
+ * Author: Christian Alberto Gomez
+ * Company: Reveture
+ * Date: September 3, 2024
+ */
+
 @Repository
 public interface AccountRepository extends JpaRepository<Account, Integer> {
     Optional<Account> findByUsername(String username);

@@ -8,6 +8,12 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
 
+/**
+ * Author: Christian Alberto Gomez
+ * Company: Reveture
+ * Date: September 3, 2024
+ */
+
 @Service
 public class MessageService {
 

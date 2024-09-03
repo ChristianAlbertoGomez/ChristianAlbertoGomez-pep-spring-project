@@ -12,6 +12,13 @@ import com.example.service.MessageService;
 import java.util.List;
 import java.util.Optional;
 
+
+/**
+ * Author: Christian Alberto Gomez
+ * Company: Reveture
+ * Date: September 3, 2024
+ */
+
 /**
  * TODO: You will need to write your own endpoints and handlers for your controller using Spring. The endpoints you will need can be
  * found in readme.md as well as the test cases. You be required to use the @GET/POST/PUT/DELETE/etc Mapping annotations
