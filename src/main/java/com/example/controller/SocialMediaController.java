@@ -94,14 +94,24 @@ public class SocialMediaController {
     @GetMapping("/messages/{messageId}")
     public ResponseEntity<Message> getMessageById(@PathVariable Integer messageId) {
         Optional<Message> message = messageService.getMessageById(messageId);
-        return message.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
+        if (message.isPresent()) {
+            return ResponseEntity.ok(message.get());
+        } else {
+            // Return 200 OK with an empty body
+            return ResponseEntity.ok().build();
+        }
     }
 
-    
+
     @DeleteMapping("/messages/{messageId}")
-    public ResponseEntity<Void> deleteMessage(@PathVariable Integer messageId) {
-        messageService.deleteMessage(messageId);
-        return ResponseEntity.ok().build();
+    public ResponseEntity<Integer> deleteMessage(@PathVariable Integer messageId) {
+        Optional<Message> message = messageService.getMessageById(messageId);
+        if (message.isPresent()) {
+            messageService.deleteMessage(messageId);
+            return ResponseEntity.ok(1); // Return 1 when a message is successfully deleted
+        } else {
+            return ResponseEntity.ok().build(); // Return empty body when no message is found
+        }
     }
 
     
