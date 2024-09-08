@@ -9,7 +9,12 @@ import java.util.List;
 /**
  * Author: Christian Alberto Gomez
  * Company: Reveture
- * Date: September 3, 2024
+ * Date: September 8, 2024
+ * 
+ * Class Purpose:
+ * The MessageRepository interface provides data access methods for the Message entity.
+ * It extends JpaRepository, offering CRUD operations and additional query capabilities.
+ * The repository includes a custom method to find messages based on the user ID of the message's author.
  */
 
 @Repository

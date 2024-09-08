@@ -10,7 +10,13 @@ import java.util.Optional;
 /**
  * Author: Christian Alberto Gomez
  * Company: Reveture
- * Date: September 3, 2024
+ * Date: September 8, 2024
+ * 
+ * Class Purpose:
+ * The AccountService class handles business logic and operations related to the Account entity.
+ * It provides methods to create, retrieve, update, and delete accounts, utilizing the AccountRepository
+ * for data access. This service layer abstracts the underlying repository operations and enforces any
+ * business rules related to account management.
  */
 
 @Service

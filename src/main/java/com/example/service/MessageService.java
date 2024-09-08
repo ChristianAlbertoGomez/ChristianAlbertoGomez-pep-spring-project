@@ -11,7 +11,14 @@ import java.util.Optional;
 /**
  * Author: Christian Alberto Gomez
  * Company: Reveture
- * Date: September 3, 2024
+ * Date: September 8, 2024
+ * 
+ * Class Purpose:
+ * The MessageService class manages business logic and operations related to the Message entity.
+ * It offers methods to create, retrieve, update, and delete messages using the MessageRepository
+ * for data access. This service layer encapsulates the repository operations and applies any
+ * necessary business rules for message management.
+ * 
  */
 
 @Service

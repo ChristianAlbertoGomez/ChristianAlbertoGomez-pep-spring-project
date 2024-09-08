@@ -9,7 +9,12 @@ import java.util.Optional;
 /**
  * Author: Christian Alberto Gomez
  * Company: Reveture
- * Date: September 3, 2024
+ * Date: September 8, 2024
+ * 
+ * Class Purpose:
+ *  The AccountRepository interface provides data access methods for the Account entity. 
+ *  It extends JpaRepository, which offers CRUD operations and allows querying of Account data 
+ *  using various methods. The repository includes a custom method to find accounts by their username.
  */
 
 @Repository
